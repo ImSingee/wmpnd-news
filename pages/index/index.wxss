@@ -96,3 +96,23 @@
   line-height: 42rpx;
   opacity: 0.7;
 }
+
+.new-list:first-child {
+  display: block;
+  position: relative;
+}
+
+.new-list:first-child image {
+  width: 100%;
+}
+
+.new-list:first-child .text {
+  position: absolute;
+  bottom: 45rpx;
+  left: 20rpx;
+  color: white;
+}
+
+.new-list:first-child .text .note {
+  opacity: 0.8;
+}
