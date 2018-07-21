@@ -4,9 +4,10 @@
     "pages/content/content"
   ],
   "window": {
+    "navigationStyle": "custom",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#3ba0df",
     "navigationBarTitleText": "快读•资讯",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

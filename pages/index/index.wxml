@@ -1,7 +1,13 @@
-<view class="types">
-  <view wx:for="{{ types }}" wx:key="id" class="type-item {{ item.id === typeItemId ? 'chosen': ''}}" bindtap="onTapTypeChoose" data-id="{{ item.id }}">
-    <view>{{ item.name }}</view>
-    <view class="tip"></view>
+<view class="top">
+  <view class="navigationBar">
+    <image src="/images/home-icon.png"></image>
+    <view>快读 • 资讯</view>
+  </view>
+  <view class="types">
+    <view wx:for="{{ types }}" wx:key="id" class="type-item {{ item.id === typeItemId ? 'chosen': ''}}" bindtap="onTapTypeChoose" data-id="{{ item.id }}">
+      <view>{{ item.name }}</view>
+      <view class="tip"></view>
+    </view>
   </view>
 </view>
 <view class="news">

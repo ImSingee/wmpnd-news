@@ -72,7 +72,9 @@ Page({
   onShareAppMessage: function () {
   
   },
-
+  onTapBack(){
+    wx.navigateBack()
+  },
   getContent(){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',

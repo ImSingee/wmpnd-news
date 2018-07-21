@@ -1,3 +1,7 @@
+<view class="navigationBar">
+  <image src="/images/left-icon.png" bindtap="onTapBack"></image>
+  <view>快读 • 资讯</view>
+</view>
 <view class="page">
   <view class="title">{{ title }}</view>
   <view class="info">
