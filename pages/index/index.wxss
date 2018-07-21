@@ -1,21 +1,73 @@
-/**index.wxss**/
-.userinfo {
+.types {
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  background-color: #3ba0df;
+  color: white;
+}
+
+.type-item {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.type-item.chosen {
+  font-size: 40rpx;
+  line-height: 56rpx;
+}
+
+.type-item.chosen .tip {
+  border-bottom: 3rpx solid rgba(255, 255, 255, 0.8);
+  height: 3rpx;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.news {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.new-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+}
+.new-list:last-child {
+  border: none;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.new-list .image {
+  width: auto;
+  height: auto;
 }
 
-.usermotto {
-  margin-top: 200px;
+.new-list .image image {
+  width: 200rpx;
+  height: auto;
+}
+
+.new-list .text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-list .title {
+  font-size: 35rpx;
+  line-height: 49rpx;
+}
+
+.new-list .text .note {
+  text-align: left;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.7;
 }

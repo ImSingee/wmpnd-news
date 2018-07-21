@@ -1,13 +1,17 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="types">
+  <view wx:for="{{ types }}" wx:key="id" class="type-item {{ item.id === typeItemId ? 'chosen': ''}}" bindtap="onTapTypeChoose" data-id="{{ item.id }}">
+    <view>{{ item.name }}</view>
+    <view class="tip"></view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+</view>
+<view class="news">
+  <view wx:for="{{ newsList }}" wx:key="id" class="new-list">
+    <view class="text">
+      <view class="title">{{ item.title }}</view>
+      <view class="note">{{ item.source }}{{ item.time }}</view>
+    </view>
+    <view class="image">
+      <image src="{{ item.firstImage }}" mode="widthFix"></image>
+    </view>
   </view>
 </view>
