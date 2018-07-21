@@ -1,4 +1,5 @@
-// pages/index/index.js
+import util from '../../utils/util'
+
 const types = [
   {
     id: 0,
@@ -117,7 +118,7 @@ Page({
         for(let i in result) {
           let datetime = new Date(result[i].date)
           result[i].source += '   '
-          result[i].time = formatTime(datetime)
+          result[i].time = util.formatTime(datetime)
         }
         this.setData({
           newsList: result
@@ -135,17 +136,11 @@ Page({
       typeItemId
     })
     this.getAllArticles()
+  },
+  onTapNews(source) {
+    let id = source.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/content/content?id=${id}`,
+    })
   }
 })
-
-function formatTime(d) {
-  let hour = d.getHours()
-  let minute = d.getMinutes()
-  if (hour < 10) {
-    hour = '0' + hour
-  }
-  if (minute < 10) {
-    minute = '0' + minute
-  }
-  return `${hour}:${minute}`
-}

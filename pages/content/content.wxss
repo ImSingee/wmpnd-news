@@ -1,0 +1,35 @@
+.page {
+  padding: 30rpx;
+}
+
+.title {
+  margin-bottom: 20rpx;
+  font-size: 40rpx;
+  line-height: 56rpx;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.5;
+}
+.info .source {
+  flex-grow: 1;
+}
+
+.content-item {
+  margin: 30rpx 0;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  text-align:justify;
+  opacity: 0.8;
+}
+
+.content-item .strong {
+  font-weight: bold;
+}
+
+.content-item image {
+  width: 100%;
+}

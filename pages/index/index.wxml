@@ -5,7 +5,7 @@
   </view>
 </view>
 <view class="news">
-  <view wx:for="{{ newsList }}" wx:key="id" class="new-list">
+  <view wx:for="{{ newsList }}" wx:key="id" class="new-list" bindtap="onTapNews" data-id="{{ item.id }}">
     <view class="text">
       <view class="title">{{ item.title }}</view>
       <view class="note">{{ item.source }}{{ item.time }}</view>
