@@ -1,13 +1,18 @@
+function twoDigital(num) {
+  if(num < 10) {
+    return '0' + num
+  } else {
+    return num
+  }
+}
+
 function formatTime(d) {
-  let hour = d.getHours()
-  let minute = d.getMinutes()
-  if (hour < 10) {
-    hour = '0' + hour
-  }
-  if (minute < 10) {
-    minute = '0' + minute
-  }
-  return `${hour}:${minute}`
+  let month = twoDigital(d.getMonth())
+  let date = twoDigital(d.getDate())
+  let hour = twoDigital(d.getHours())
+  let minute = twoDigital(d.getMinutes())
+  
+  return `${month}-${date} ${hour}:${minute}`
 }
 
 export default {
