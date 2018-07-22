@@ -73,6 +73,11 @@
   height: auto;
 }
 
+.new-list:first-child .image {
+  max-height: 330rpx; /* 限制最大高度 */
+  overflow: hidden; /* 限制最大高度 */
+}
+
 .new-list .image image {
   width: 200rpx;
   height: auto;
