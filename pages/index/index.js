@@ -77,6 +77,9 @@ Page({
           let datetime = new Date(result[i].date)
           result[i].source += '   '
           result[i].time = util.formatTime(datetime)
+          if (!result[i].firstImage) {
+            result[i].firstImage = '/images/default-firstImage.jpg'
+          }
         }
         this.setData({
           newsList: result
