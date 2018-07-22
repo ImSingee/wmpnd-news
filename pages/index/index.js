@@ -83,7 +83,7 @@ Page({
         })
       },
       complete: () => {
-        callback && callback();
+        typeof callback === 'function' && callback();
       }
     })
   },
